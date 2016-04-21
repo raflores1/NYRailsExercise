@@ -1,4 +1,9 @@
 
  @import "bootstrap";
  @import "users";
- @import 'partials/usersnew'
+ @import 'partials/usersnew';
+ @import 'photoposts';
+
+ button {
+  margin-top: 1rem;
+ }
