@@ -1,16 +1,12 @@
 <div class="container">
   <h1>Photos</h1>
 
-  <%= link_to 'My Photos', show_photoposts_path(:current_user) %>
-
   <% @photoposts.each do |photopost| %>
 
       <div class="photopost">
        <h3><%= photopost.title %></h3>
         <strong>From: <%= photopost.user.email %></strong>
        <p><%= photopost.url %></p>
-        <%= link_to 'Edit', edit_photopost_path(photopost.id) %>
-        <%= link_to 'Destroy', photopost, method: :delete, data: { confirm: 'Are you sure?' } %>
      </div>
 
 

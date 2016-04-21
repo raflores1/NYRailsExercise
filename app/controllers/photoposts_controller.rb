@@ -8,9 +8,7 @@ class PhotopostsController < ApplicationController
   end
 
   def index
-    @photoposts = Photopost.all
-    @myphotos = current_user.photoposts
-
+        @photoposts = Photopost.all
   end
 
   def show
@@ -24,7 +22,7 @@ class PhotopostsController < ApplicationController
   def destroy
     @photopost.destroy
     respond_to do |format|
-      format.html { redirect_to photoposts_path, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to '/profile', notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -32,7 +30,7 @@ class PhotopostsController < ApplicationController
   def update
     respond_to do |format|
     if @photopost.update(photopost_params)
-        format.html { redirect_to @photopost, :notice => 'Photo was successfully updated.' }
+        format.html { redirect_to '/profile', :notice => 'Photo was successfully updated.' }
         format.json { render :json => @photopost, :status => :ok, :location => @photopost }
       else
         format.html { render :edit }
@@ -59,7 +57,7 @@ class PhotopostsController < ApplicationController
     private
 
   def set_user
-    current_user
+    @user = current_user
   end
 
   def set_photopost

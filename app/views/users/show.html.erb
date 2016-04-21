@@ -1,7 +1,27 @@
 <div class="container">
-  <h1>User view</h1>
+  <h1>Profile</h1>
 
-  <p><%=@user.name + ' ' + @user.email %></p>
+  <strong><%=@user.name %></strong>
+  <p><%=@user.email %></p>
+
+
+  <h2>My Photos</h2>
+
+  <% @photoposts.each do |photopost| %>
+
+      <div class="photopost">
+        <h4><%= photopost.title %></h4>
+        <strong>From: <%= photopost.user.email %></strong>
+        <p><%= photopost.url %></p>
+        <%= link_to 'Add Photo', new_user_photopost_path(photopost.user_id, photopost.id) %>
+        <%= link_to 'Edit', edit_user_photopost_path(photopost.user_id, photopost.id) %>
+
+        <%= link_to 'Destroy', user_photopost_path(photopost.user_id, photopost.id),  method: :delete,   data: { confirm: 'Are you sure?' } %>
+      </div>
+
+
+  <% end %>
+
 
   <%=link_to 'Home', '/pages/home' %>
 
