@@ -20,7 +20,12 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'profile', to: 'users#show'
 
-  resources :photoposts
+  resources :photoposts do
+    member do
+      put 'like', to: "photoposts#upvote"
+    end
+  end
+
 
   resources :users do
     resources :photoposts
