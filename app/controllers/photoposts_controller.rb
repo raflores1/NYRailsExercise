@@ -1,6 +1,6 @@
 class PhotopostsController < ApplicationController
   before_filter :authorize, only: [:edit, :update, :new ]
-  before_action :set_photopost, only: [:edit, :show, :destroy, :update]
+  before_action :set_photopost, except: [:index, :new]
   before_action :set_user
 
   def new
@@ -9,13 +9,17 @@ class PhotopostsController < ApplicationController
 
   def index
     @photoposts = Photopost.all
+    @myphotos = current_user.photoposts
+
   end
 
   def show
+
   end
 
   def edit
   end
+
 
   def destroy
     @photopost.destroy
