@@ -15,6 +15,13 @@
     <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
       &#9776;
     </button>
+    <% if current_user %>
+        Logged in as <%= current_user.email %>.
+        <%= link_to "Log Out", logout_path %>
+    <% else %>
+        <%= link_to "Sign Up", signup_path %> or
+        <%= link_to "Log In", login_path %>
+    <% end %>
     <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
       <a class="navbar-brand" href="/pages/home">NYRails</a>
       <ul class="nav navbar-nav">
