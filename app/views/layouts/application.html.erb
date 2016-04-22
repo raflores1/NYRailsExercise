@@ -11,37 +11,42 @@
 </head>
 <body>
 <header>
-  <nav class="navbar navbar-dark bg-inverse">
+  <nav class="navbar navbar-light bg-faded">
     <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
       &#9776;
     </button>
-    <% if current_user %>
-        Logged in as <%= current_user.email %>.
-        <%= link_to "Log Out", logout_path %>
-    <% else %>
-        <%= link_to "Sign Up", signup_path %> or
-        <%= link_to "Log In", login_path %>
-    <% end %>
+    <ul class="nav navbar-nav">
+      <% if current_user %>
+          <li class="pull-xs-right" id="loged"> Logged in as <%= current_user.name %>.</li>
+          <li> <%= link_to "Log Out", logout_path, class: 'pull-xs-right' %></li>
+      <% else %>
+          <li> <%= link_to "Sign Up", signup_path, class: 'pull-xs-right', id: 'loged' %></li>
+          <li> <%= link_to "Log In", login_path, class: 'pull-xs-right' %></li>
+      <% end %>
+    </ul>
+
     <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-      <a class="navbar-brand" href="/pages/home">NYRails</a>
+      <a class="navbar-brand" href="/photoposts">NYRails</a>
       <ul class="nav navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="/pages/home">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item ">
+          <a class="nav-link " href="/photoposts">Photoposts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/photoposts">Photoposts</a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link" href='/profile'>Profile</a>
+         <a class="nav-link " href='/profile'>Profile</a>
         </li>
       </ul>
     </div>
   </nav>
-
-
 </header>
+<div class="container">
+  <%flash.each do |name, msg| %>
+  <%= content_tag :div, msg, class: "alert alert-info" %>
+  <% end %>
+</div>
 
 <%= yield %>
+
+
 
 </body>
 </html>

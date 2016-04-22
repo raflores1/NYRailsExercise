@@ -1,9 +1,13 @@
 
  @import "bootstrap";
+ @import 'photoposts';
  @import "users";
  @import 'partials/usersnew';
- @import 'photoposts';
 
  button {
   margin-top: 1rem;
+ }
+
+ #loged {
+   margin-left: 2rem;
  }
