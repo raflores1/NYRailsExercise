@@ -1,6 +1,6 @@
 class PhotopostsController < ApplicationController
   before_filter :authorize, only: [:edit, :update, :new ]
-  before_action :set_photopost, only: [:edit, :update, :upvote]
+  before_action :set_photopost, only: [:edit, :update, :upvote, :destroy]
   before_action :set_user
 
   def new
@@ -49,7 +49,7 @@ class PhotopostsController < ApplicationController
     @photopost = current_user.photoposts.build(photopost_params)
     respond_to do |format|
       if @photopost.save
-        format.html { redirect_to @photopost, :notice => 'Photo was successfully created.' }
+        format.html { redirect_to '/profile', :notice => 'Photo was successfully created.' }
         format.json { render :json => @photopost, :status => :created, :location => @photopost }
       else
         format.html { render :action => "new" }
@@ -70,6 +70,6 @@ class PhotopostsController < ApplicationController
   end
 
     def photopost_params
-      params.require(:photopost).permit( :title, :url )
+      params.require(:photopost).permit( :image, :title, :url )
     end
 end

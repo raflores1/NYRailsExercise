@@ -16,11 +16,15 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'bootstrap'
 
+gem "font-awesome-rails"
+
 gem 'sprockets-rails'
 
 gem 'rails-assets-tether', '>= 1.1.0'
 
 gem 'acts_as_votable', '~> 0.10.0'
+
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

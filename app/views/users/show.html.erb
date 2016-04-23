@@ -9,20 +9,19 @@
 
   <% @photoposts.each do |photopost| %>
 
+      <%= image_tag photopost.image.url(:medium) %>
       <div class="photopost">
         <h4><%= photopost.title %></h4>
         <strong>From: <%= photopost.user.email %></strong>
         <p><%= photopost.url %></p>
-        <%= link_to 'Add Photo', new_user_photopost_path(photopost.user_id, photopost.id) %>
         <%= link_to 'Edit', edit_user_photopost_path(photopost.user_id, photopost.id) %>
-
         <%= link_to 'Destroy', user_photopost_path(photopost.user_id, photopost.id),  method: :delete,   data: { confirm: 'Are you sure?' } %>
       </div>
 
 
   <% end %>
 
-
+  <%= link_to 'Add Photo', new_user_photopost_path(@user)%>
   <%=link_to 'Home', '/pages/home' %>
 
 </div>

@@ -1,11 +1,12 @@
 
  @import "bootstrap";
+ @import "font-awesome";
  @import 'photoposts';
  @import "users";
  @import 'partials/usersnew';
 
  button {
-  margin-top: 1rem;
+   @import "font-awesome";
  }
 
  #loged {

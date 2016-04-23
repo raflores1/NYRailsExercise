@@ -4,11 +4,14 @@
   <% @photoposts.each do |photopost| %>
 
       <div class="photopost">
+        <%= image_tag photopost.image.url(:medium) %>
+      </div>
+      <div class="photopost">
        <h3><%= photopost.title %></h3>
         <strong>From: <%= photopost.user.email %></strong>
        <p><%= photopost.url %></p>
-        <%= button_to like_photopost_path(photopost.id), method: :put,  class: 'btn btn-default btn-sm'  do %>
-        <span>Like<%=" " +photopost.get_upvotes.size.to_s %></span>
+        <%= button_to like_photopost_path(photopost.id), method: :put,  class: 'btn btn-primary btn-sm'  do %>
+        <i class="fa fa-heart-o"><%=" " +photopost.get_upvotes.size.to_s %></i>
         <% end %>
      </div>
 <% end %>
