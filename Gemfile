@@ -30,6 +30,8 @@ gem 'acts_as_votable', '~> 0.10.0'
 
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
+gem 'rails_12factor', group: :production
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -59,5 +61,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  ruby '2.2.2'
 end
 
