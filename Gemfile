@@ -18,9 +18,13 @@ gem 'bootstrap'
 
 gem "font-awesome-rails"
 
+gem 'masonry-rails', '~> 0.2.4'
+
 gem 'sprockets-rails'
 
-gem 'rails-assets-tether', '>= 1.1.0'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
 
 gem 'acts_as_votable', '~> 0.10.0'
 

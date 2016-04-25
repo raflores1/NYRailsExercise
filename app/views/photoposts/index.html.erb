@@ -1,18 +1,23 @@
 <div class="container">
-  <h1>Photos</h1>
 
+  <div id="photopost" class = "transitions-enabled">
+  <h1>Photos</h1>
+  <div class="card-columns">
   <% @photoposts.each do |photopost| %>
 
-      <div class="photopost">
-        <%= image_tag photopost.image.url(:medium) %>
-      </div>
-      <div class="photopost">
-       <h3><%= photopost.title %></h3>
-        <strong>From: <%= photopost.user.email %></strong>
-       <p><%= photopost.url %></p>
+
+      <div class="card">
+        <%= image_tag photopost.image.url(:medium), class: 'card-img-top' %>
+      <div class="card-block">
+       <h2 class="card-title"><%= photopost.title %></h2>
+        <strong class="user">From: <%= photopost.user.email %></strong>
+       <p class="card-text"><%= photopost.url %></p>
         <%= button_to like_photopost_path(photopost.id), method: :put,  class: 'btn btn-primary btn-sm'  do %>
-        <i class="fa fa-heart-o"><%=" " +photopost.get_upvotes.size.to_s %></i>
+        <i class="fa fa-heart-o"><%=" " + photopost.get_upvotes.size.to_s %></i>
         <% end %>
      </div>
-<% end %>
+  </div>
+  <% end %>
+  </div>
+</div>
 </div>

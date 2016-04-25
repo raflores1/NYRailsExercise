@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionmailer (4.2.6)
       actionpack (= 4.2.6)
@@ -80,6 +81,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    masonry-rails (0.2.4)
+      railties
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0221)
@@ -172,10 +175,11 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
+  masonry-rails (~> 0.2.4)
   paperclip (~> 4.3, >= 4.3.6)
   pg (~> 0.15)
   rails (= 4.2.6)
-  rails-assets-tether (>= 1.1.0)
+  rails-assets-tether (>= 1.1.0)!
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

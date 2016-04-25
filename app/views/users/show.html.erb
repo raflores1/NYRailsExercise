@@ -4,24 +4,32 @@
   <strong><%=@user.name %></strong>
   <p><%=@user.email %></p>
 
-
+  <div id="photopost" class = "transitions-enabled">
   <h2>My Photos</h2>
 
-  <% @photoposts.each do |photopost| %>
-
-      <%= image_tag photopost.image.url(:medium) %>
-      <div class="photopost">
-        <h4><%= photopost.title %></h4>
-        <strong>From: <%= photopost.user.email %></strong>
-        <p><%= photopost.url %></p>
-        <%= link_to 'Edit', edit_user_photopost_path(photopost.user_id, photopost.id) %>
-        <%= link_to 'Destroy', user_photopost_path(photopost.user_id, photopost.id),  method: :delete,   data: { confirm: 'Are you sure?' } %>
-      </div>
-
-
-  <% end %>
-
   <%= link_to 'Add Photo', new_user_photopost_path(@user)%>
-  <%=link_to 'Home', '/pages/home' %>
 
+  <div class="card-columns">
+    <% @photoposts.each do |photopost| %>
+
+        <div class="card">
+          <%= image_tag photopost.image.url(:medium), class: 'card-img-top' %>
+          <div class="card-block">
+            <h2 class="card-title"><%= photopost.title %></h2>
+            <strong class="user">From: <%= photopost.user.email %></strong>
+            <p class="card-text"><%= photopost.url %></p>
+            <%= button_to like_photopost_path(photopost.id), method: :put,  class: 'btn btn-primary btn-sm'  do %>
+                <i class="fa fa-heart-o"><%=" " + photopost.get_upvotes.size.to_s %></i>
+            <% end %>
+          </div>
+          <%= link_to 'Edit', edit_user_photopost_path(photopost.user_id, photopost.id) %>
+          <%= link_to 'Destroy', user_photopost_path(photopost.user_id, photopost.id),  method: :delete,   data: { confirm: 'Are you sure?' } %>
+
+        </div>
+    <% end %>
+  </div>
+  <%=link_to 'Home', '/pages/home' %>
 </div>
+
+
+
