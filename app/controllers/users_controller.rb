@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authorize, only: [:edit, :update, :show]
+  before_action :set_photoposts, only: [:show]
 
   def new
     @user = User.new
@@ -26,7 +27,6 @@ class UsersController < ApplicationController
 
   def show
       @user = current_user
-     @photoposts = @user.photoposts
   end
 
   def update
@@ -34,6 +34,11 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def set_photoposts
+    @photoposts = current_user.photoposts
+  end
+
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end

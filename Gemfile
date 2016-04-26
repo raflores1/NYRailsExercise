@@ -14,6 +14,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'aws-sdk', '~> 2'
+
+gem 'figaro'
+
 gem 'bootstrap'
 
 gem "font-awesome-rails"
@@ -28,9 +32,10 @@ end
 
 gem 'acts_as_votable', '~> 0.10.0'
 
-gem 'paperclip', '~> 4.3', '>= 4.3.6'
+gem "paperclip", github: "thoughtbot/paperclip", ref: "26a4f4f"
 
 gem 'rails_12factor', group: :production
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -46,6 +51,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

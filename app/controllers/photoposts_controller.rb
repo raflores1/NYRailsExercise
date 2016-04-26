@@ -8,7 +8,7 @@ class PhotopostsController < ApplicationController
   end
 
   def index
-        @photoposts = Photopost.all
+    @photoposts = Photopost.all
   end
 
   def show
