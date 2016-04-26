@@ -4,3 +4,4 @@ Paperclip::Attachment.default_options[:path] = '/:class/:attachment/:id_partitio
 Paperclip::Attachment.default_options[:bucket] = 'us-west-1'
 Paperclip::Attachment.default_options[:credentials] = {:access_key_id => ENV['AWS_ACCESS_KEY_ID'], :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']}
 Paperclip::Attachment.default_options[:s3_region] =  'us-west-1'
+Paperclip::Attachment.default_options[:s3_host_name] =  ENV['S3_HOST_NAME']
