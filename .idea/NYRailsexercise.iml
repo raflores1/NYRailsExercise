@@ -226,9 +226,6 @@
     <orderEntry type="library" scope="PROVIDED" name="acts_as_votable (v0.10.0, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v6.0.3, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v6.3.6, RVM: ruby-2.2.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="aws-sdk (v2.2.36, RVM: ruby-2.2.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="aws-sdk-core (v2.2.36, RVM: ruby-2.2.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="aws-sdk-resources (v2.2.36, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.11, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v0.7.2, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootstrap (v4.0.0.alpha3, RVM: ruby-2.2.2) [gem]" level="application" />
@@ -249,10 +246,8 @@
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.3.6, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.4.1, RVM: ruby-2.2.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="jmespath (v1.2.4, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.1.1, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.8.3, RVM: ruby-2.2.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="json_pure (v1.8.3, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.0.3, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.6.4, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="masonry-rails (v0.2.4, RVM: ruby-2.2.2) [gem]" level="application" />
