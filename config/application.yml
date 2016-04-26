@@ -21,5 +21,5 @@ production: 
 AWS_ACCESS_KEY_ID: AKIAIF6ZJ37Y4AEWS2HA 
 AWS_SECRET_ACCESS_KEY: 8uyfW62HDbDsXaY/W2RQViOd0NtiQj0BCgiJFdZZ 
 AWS_REGION: us-west-1 
-s3_host_name: s3.amazonaws.com
+S3_HOST_NAME: s3.amazonaws.com
 S3_BUCKET_NAME: nypins
