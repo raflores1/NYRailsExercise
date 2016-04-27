@@ -5,9 +5,11 @@
   <p><%=@user.email %></p>
 
   <div id="photopost" class = "transitions-enabled">
+
   <h2>My Photos</h2>
 
   <%= link_to 'Add Photo', new_user_photopost_path(@user)%>
+    <%= link_to 'My Favorite', '/myfavorite' %>
 
   <div class="card-columns">
     <% @photoposts.each do |photopost| %>

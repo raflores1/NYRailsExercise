@@ -33,6 +33,11 @@ class UsersController < ApplicationController
 
   end
 
+  def myfavorite
+    @user = current_user
+    @photoposts = @user.find_up_voted_items
+  end
+
   private
 
   def set_photoposts
